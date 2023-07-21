@@ -1,0 +1,20 @@
+{
+  "name": "c-snippet-morningstart",
+  "displayName": "c snippet",
+  "description": "可以快速生成c语言代码片段，适合初学者使用",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "c",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
