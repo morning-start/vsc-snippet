@@ -76,7 +76,7 @@
 			"    return res;",
 			"}"
 		],
-		"description":"标准函数模板"
+		"description": "标准函数模板"
 	},
 	"void function": {
 		"prefix": "func_void",
@@ -86,7 +86,7 @@
 			"    $0",
 			"}"
 		],
-		"description":"以void为返回的函数"
+		"description": "以void为返回的函数"
 	},
 	"int function": {
 		"prefix": "func_int",
@@ -97,7 +97,7 @@
 			"    return 0;",
 			"}"
 		],
-		"description":"以int为返回的函数"
+		"description": "以int为返回的函数"
 	},
 	"float function": {
 		"prefix": "func_float",
@@ -108,7 +108,7 @@
 			"    return 0.0f;",
 			"}"
 		],
-		"description":"以float为返回的函数"
+		"description": "以float为返回的函数"
 	},
 	"double function": {
 		"prefix": "func_double",
@@ -119,7 +119,7 @@
 			"    return 0.0;",
 			"}"
 		],
-		"description":"以double为返回的函数"
+		"description": "以double为返回的函数"
 	},
 	"char function": {
 		"prefix": "func_char",
@@ -130,10 +130,8 @@
 			"    return '';",
 			"}"
 		],
-		"description":"以char为返回的函数"
+		"description": "以char为返回的函数"
 	},
-
-
 	// TODO 结构体
 	"for loop": {
 		"prefix": "for",
@@ -143,15 +141,14 @@
 			"    $6",
 			"}"
 		],
-        "description": ""
+		"description": ""
 	},
-    "forr loop":{
-        "prefix":"forr",
-        "body":[
-            "for (${1:int} ${2|i,j,k|}=${3:n-1}; $2${4:>=0}; $2${5:--})",
-        ]
-    },
-
+	"forr loop": {
+		"prefix": "forr",
+		"body": [
+			"for (${1:int} ${2|i,j,k|}=${3:n-1}; $2${4:>=0}; $2${5:--})"
+		]
+	},
 	"while loop": {
 		"prefix": "while",
 		"body": [
@@ -162,7 +159,11 @@
 		]
 	},
 	"do-while loop": {
-		"prefix": ["do","while","do-while"],
+		"prefix": [
+			"do",
+			"while",
+			"do-while"
+		],
 		"body": [
 			"do",
 			"{",
@@ -178,9 +179,9 @@
 		]
 	},
 	// 数组函数
-	"print array function":{
-		"prefix":"print_arr",
-		"body":[
+	"print array function": {
+		"prefix": "print_arr",
+		"body": [
 			"void print_arr(${1:int} arr[], int arr_length)",
 			"{",
 			"    printf(\"[\");",
@@ -191,15 +192,19 @@
 			"    printf(\"\\b]\\n\");",
 			"}"
 		],
-		"description":"打印数组的函数"
+		"description": "打印数组的函数"
 	},
-	"length of array function":{
-		"prefix":"len_arr",
-		"body":[
+	"length of array function": {
+		"prefix": "len_arr",
+		"body": [
 			"int len_arr(${1:int} arr[])",
 			"{",
 			"    return sizeof(arr)/sizeof(arr[0])",
 			"}"
 		]
+	},
+	"length": {
+		"prefix": "len",
+		"body": "int ${0:len} = sizeof(${1:arr}) / sizeof($1[0]);"
 	}
 }
