@@ -2,7 +2,7 @@
   "name": "c-snippet-morningstart",
   "displayName": "c snippet",
   "description": "可以快速生成c语言代码片段，适合初学者使用",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.80.0"
   },

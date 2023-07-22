@@ -182,10 +182,10 @@
 	"print array function": {
 		"prefix": "print_arr",
 		"body": [
-			"void print_arr(${1:int} arr[], int arr_length)",
+			"void print_arr(${1:int} arr[],int length)",
 			"{",
 			"    printf(\"[\");",
-			"    for (int i = 0; i < arr_length; i++)",
+			"    for (int i = 0; i < length; i++)",
 			"    {",
 			"        printf(\"%d \", arr[i]);",
 			"    }",
@@ -194,17 +194,21 @@
 		],
 		"description": "打印数组的函数"
 	},
-	"length of array function": {
-		"prefix": "len_arr",
-		"body": [
-			"int len_arr(${1:int} arr[])",
-			"{",
-			"    return sizeof(arr)/sizeof(arr[0])",
-			"}"
-		]
-	},
-	"length": {
-		"prefix": "len",
+	"length snippet": {
+		"prefix": "arr_len",
 		"body": "int ${0:len} = sizeof(${1:arr}) / sizeof($1[0]);"
+	},
+	"copy array":{
+		"prefix": "copy_arr",
+		"body": [
+			"void copy_arr(${1:int} source[] , ${2:int} dest[], ${3:int} length)",
+			"{",
+			"    for (int i = 0; i < length; i++)",
+			"    {",
+			"        dest[i] = source[i];",
+			"    }",
+			"}"
+
+		]
 	}
 }
