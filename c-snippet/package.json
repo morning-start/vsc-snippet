@@ -2,13 +2,13 @@
   "name": "c-snippet-morningstart",
   "displayName": "c snippet",
   "description": "可以快速生成c语言代码片段，适合初学者使用",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.80.0"
   },
   "publisher": "morningstart",
   "repository": {
-    "github":"https://github.com/morning-start/vsc-snippet/tree/main/c-snippet"
+    "github": "https://github.com/morning-start/vsc-snippet/tree/main/c-snippet"
   },
   "icon": "images/icon.png",
   "categories": [

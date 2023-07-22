@@ -181,7 +181,7 @@
 	"print array function":{
 		"prefix":"print_arr",
 		"body":[
-			"void print_arr(#{1:int} arr[], int arr_length)",
+			"void print_arr(${1:int} arr[], int arr_length)",
 			"{",
 			"    printf(\"[\");",
 			"    for (int i = 0; i < arr_length; i++)",
@@ -193,17 +193,13 @@
 		],
 		"description":"打印数组的函数"
 	},
-	"initialize array function":{
-		"prefix":"init_arr",
+	"length of array function":{
+		"prefix":"len_arr",
 		"body":[
-			"void init_arr(int arr[], int arr_length)",
+			"int len_arr(${1:int} arr[])",
 			"{",
-			"    for (int i = 0; i < arr_length; i++)",
-			"    {",
-			"        arr[i] = 0;",
-			"    }",
+			"    return sizeof(arr)/sizeof(arr[0])",
 			"}"
-		],
-		"description":"初始化数组，数组的初始值为0"
+		]
 	}
 }
